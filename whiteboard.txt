@@ -1,0 +1,11 @@
+Pig Dice 
+
+What do we  need: 
+- Game constructor
+- 1 player
+- 2 player
+- proto: score board tally if/then stmts
+- display (html): window.load()
+- 1 die (Math.random()) 1-6
+- proto: ability to clear round score if 1 is rolled
+- proto: ability to add score for each round and add to overall score

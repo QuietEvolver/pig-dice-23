@@ -6,17 +6,15 @@
 
 ## Technologies Used
 
-* Javascript
-* CSS
-* HTML
-* TDD
+* _Javascript_
+* _CSS_
+* _HTML_
+* _TDD_
+* _Whiteboard_
 
 ## Description
 
-_Create a website where you can keep track of all of all addresses. Each address should be an object with multiple properties. Display those addresses when a user clicks on a address' name. Complete the business logic for your address book object. Use test-driven development to write your business logic, and include the tests in your README.md. After every passing test, make sure to commit your code.
-* Add functionality to record and display a contact's email address.
-* Add functionality to record and display a contact's physical address.
-* Then, add functionality that allows a user to record multiple addresses (email or physical) for a single Contact, and what type each address is (ie: "work", "personal", etc.) (Hint: Address will need to be an object with multiple properties saved within the Contact object.)_
+_A pig dice game where two users can play dice against each other._
 
 ## Setup/Installation Requirements
 
@@ -25,27 +23,20 @@ _Create a website where you can keep track of all of all addresses. Each address
 
 
 ## TDD Tests
-Describe Place(placeName, countryName, seasonVisited, notes);
+Describe getRandomInt();
 
-Test 1: "It should create an object for each place visited that includes the name of the place, country, the season visited, and any notes."
-Code: let testPlace = new Place("Montana", "US", "winter", "EXTREMELY cold, subzero temperatures");
-testPlace;
-Expected Output: 
-Place {
-  placeName: "Montana";
-  countryName: "US";
-  seasonVisited: "winter";
-  notes: "EXTREMELY cold, subzero temperatures"
-}
+Test 1: "It should return a whole positive number between 1 and 6."
+Code: getRandomInt();
+Expected Output: [randomly generated number between 1 and 6]
 
 <!-- New function -->
-Describe Place.prototype.fullDescription()
+Describe GameBoard()
 
-Test 1: "To print the full description to the console."
-Code: let testPlace = new Place("Montana", "US", "winter", "EXTREMELY cold, subzero temperatures");
-testPlace.fullDescription();
-Expected Output: 
-"Montana, US"
+Test 1: "It should add 1 player to the board constructor object."
+Code: 
+let player1 = "Sarah";
+GameBoard(player1);
+Expected Output: "Sarah"
 
 <!-- New function -->
 Describe AllPlaces()

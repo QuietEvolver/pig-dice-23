@@ -27,17 +27,26 @@ let gameBoard = new GameBoard; // fake db
 GameBoard.prototype.playerTurn = function() {
   let updatedScore = diceRoll();
   let currentTurnScore = updatedScore;
-  console.log("updatedScore, currentTurnScore: ", updatedScore, currentTurnScore);
+  let currentTallyScore = 0;
+  currentTallyScore += currentTurnScore;
+  console.log("updatedScore, currentTurnScore, currentTallyScore: ", updatedScore, currentTurnScore, currentTallyScore);
   
   if (this.currentTurnScore === 1) {
     // this.roundScore = 0;
-    console.log("if rs: ", this.roundScore);
-    return this.roundScore;
+    // console.log("if rs: ", this.roundScore);
+    // return this.roundScore;
+    currentTallyScore = 0;
+    return currentTallyScore;
   } 
   else if (this.currentTurnScore !== 1) {
-    this.roundScore += currentTurnScore; // current turn tally until a 1 is rolled;
-    console.log("else t.rs: ", this.roundScore);
+    // this.roundScore += currentTurnScore; // current turn tally until a 1 is rolled;
+    currentTallyScore += currentTurnScore;
+    // console.log("else t.rs: ", this.roundScore);
+    // return this.roundScore;
   } 
+  else { // hold(event) 
+    this.roundScore += currentTallyScore;
+  }
   return this.roundScore;
 }
 

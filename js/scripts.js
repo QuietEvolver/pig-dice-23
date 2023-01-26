@@ -22,25 +22,34 @@ let diceRoll = function() {
   currentScore += roll;
   return roll; 
 }
-//let gameBoard = new GameBoard
+// let gameBoard = new GameBoard
 // diceRoll(gameBoard);
-// returns same number every time
+// seems to be working
 
-// this is what works -- this is our original
-GameBoard.prototype.score = function() {
-  let currentScore = 0;
-  let min = Math.ceil(1); //declare min here
-  let max = Math.floor(7); //declare max here; max must be 7 because max < Math.floor()
-  let roll =  Math.floor(Math.random() * (max - min) + min);
-  currentScore += roll;
-  return roll; 
-}
+// // this is what works -- this is our original
+// GameBoard.prototype.score = function() {
+//   let currentScore = 0;
+//   let min = Math.ceil(1); //declare min here
+//   let max = Math.floor(7); //declare max here; max must be 7 because max < Math.floor()
+//   let roll =  Math.floor(Math.random() * (max - min) + min);
+//   currentScore += roll;
+//   return roll; 
+// }
 
 GameBoard.prototype.playerTurn = function() {
   // player if/else turns
   // try adding diceRoll in here
-  if (this.players gameboard.score(); 
-  // let something = the value we pull in for gameboard.score();
+  let updatedScore = diceRoll();
+  console.log(updatedScore)
+  if (this.updatedScore === 1) {
+    updatedScore = 0;
+  } else if (this.updatedScore !== 1) {
+    updatedScore += diceRoll();
+    console.log(diceRoll);
+  } 
+
+  return updatedScore;
+  // let something = the value we pull in for diceRoll();
   // if that something === 1 then score will be 0
   // if that something !== 1 then roll again and add that to something
 

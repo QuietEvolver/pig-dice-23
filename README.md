@@ -49,6 +49,14 @@ Code: let newPlayers = new Player("erin", "timlin");
 Expected Output: newPlayers = {player1: erin, player2: timlin}
 
 <!-- New function -->
+Describe diceRoll();
+
+Test 1: "It should use the functionality of getRandomInt(); to roll the die and create a function that we can more easily work into code."
+Code: let gameboard = new GameBoard();
+diceroll(gameboard);
+Expected Outcome: random number between 1 and 6.
+
+<!-- New function -->
 Describe Gameboard.prototype.score();
 
 Test 1: "It should roll the die and create a score."
@@ -63,6 +71,11 @@ Test 1: "It should return the score created in Gameboard.prototype.score()."
 Code: let gameboard = new GameBoard();
 gameboard.playerTurn();
 Expected Outcome: random number between 1 and 6. 
+
+Test 2: "It should return the score created in diceRoll and add the new score to it."
+Code: let gameboard = new Gameboard();
+gameboard.playerTurn();
+Expected Outcome: random number between 1 and 6 plus a new number or 0.
 
 
 ## Known Bugs

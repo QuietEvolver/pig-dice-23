@@ -32,82 +32,38 @@ Expected Output: [randomly generated number between 1 and 6]
 <!-- New function -->
 Describe GameBoard()
 
-Test 1: "It should add 1 player to the board constructor object."
+Test 1: "It should hold 2 players in the constructor object."
 Code: 
-let player1 = "Sarah";
-GameBoard(player1);
-Expected Output: "Sarah"
+let gameboard = new GameBoard();
+gameboard.players.player1 = ("erin");
+gameboard.players;
+gameboard.players.player2 = ("vera")
+gameboard.players;
+Expected Output: player1 = ("erin"), player2 = ("vera");
 
 <!-- New function -->
-Describe AllPlaces()
+Describe Player()
 
-Test 1: "It should build an AllPlaces object housing ind'l Places."
-Code: 
-let testPlace = new Place("Montana", "US", "winter", "EXTREMELY cold, subzero temperatures");
-let allPlaces = new AllPlaces();
-allPlaces;
-Expected Output: allPlaces = "{}";
+Test 1: "It should add 2 players to the board constructor object."
+Code: let newPlayers = new Player("erin", "timlin");
+Expected Output: newPlayers = {player1: erin, player2: timlin}
 
 <!-- New function -->
-Describe AllPlaces.prototype.addPlace()
+Describe Gameboard.prototype.score();
 
-Test 1: "It should add specified place object to AllPlaces constructor object"
-Code: 
-let testPlace = new Place("Montana", "US", "winter", "EXTREMELY cold, subzero temperatures");
-let testPlace2 = new Place("Vancouver", "CAN", "winter", "cold, cold temperatures");
-let allPlaces = new AllPlaces();
-allPlaces.addPlace(testPlace);
-allPlaces.addPlace(testPlace2);
-Expected Output:
-allPlaces.places {Montana: Place, Vancouver: Place}
-
-Test 2: "It should add a unique ID to reference the object instance that assignId method is called on"
-Code: 
-let testPlace = new Place("Montana", "US", "winter", "EXTREMELY cold, subzero temperatures");
-let allPlaces = new AllPlaces();
-allPlaces.addPlace(testPlace);
-allPlaces;
-Expected Output:
-allPlaces.places {1: Place}
+Test 1: "It should roll the die and create a score."
+Code: let gameboard = new GameBoard();
+gameboard.score();
+Expected Outcome: random number between 1 and 6. 
 
 <!-- New function -->
-Describe AllPlaces.prototype.assignId()
+Describe Gameboard.prototype.playerTurn();
 
-Test 1: "It should assign a unique id to each place added to the AllPlaces object"
-Code: 
-let testPlace1 = new Place("Montana", "US", "winter", "EXTREMELY cold, subzero temperatures");
-let allPlaces = new AllPlaces();
-allPlaces.assignId(testPlace1);
-Expected Output:
-allPlaces.places {1}
+Test 1: "It should return the score created in Gameboard.prototype.score()."
+Code: let gameboard = new GameBoard();
+gameboard.playerTurn();
+Expected Outcome: random number between 1 and 6. 
 
-<!-- New function -->
-Describe AllPlaces.prototype.deletePlaceById()
-
-Test 1: "It should delete a place by a unique id previously added to the AllPlaces object"
-Code: 
-let testPlace1 = new Place("Montana", "US", "winter", "EXTREMELY cold, subzero temperatures");
-let testPlace2 = new Place("Vancouver", "CAN", "winter", "cold, cold temperatures");
-let allPlaces = new AllPlaces();
-allPlaces.addPlace(testplace1);
-allPlaces.addPlace(testplace2);
-allPlaces.deletePlaceById(1);
-Expected Output:
-allPlaces.places {2: Place}
-
-<!-- New function -->
-Describe AllPlaces.prototype.findPlaceById()
-
-Test 1: "It should find a place by a unique id previously added to the AllPlaces object"
-Code: 
-let testPlace1 = new Place("Montana", "US", "winter", "EXTREMELY cold, subzero temperatures");
-let testPlace2 = new Place("Vancouver", "CAN", "winter", "cold, cold temperatures");
-let allPlaces = new AllPlaces();
-allPlaces.addPlace(testplace1);
-allPlaces.addPlace(testplace2);
-allPlaces.findPlaceById(1);
-Expected Output:
-allPlaces.places {1: Place}
 
 ## Known Bugs
 

@@ -76,6 +76,7 @@ Test 2: "It should return the score created in diceRoll and add the new score to
 Code: let gameboard = new Gameboard();
 gameboard.playerTurn();
 Expected Outcome: random number between 1 and 6 plus a new number or 0.
+Actual Outcome: code isn't working with number 1.
 
 
 ## Known Bugs
